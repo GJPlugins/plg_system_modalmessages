@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>System - Modal Messages</name>
+	<author>The Krotek</author>
+	<creationDate>October 2017</creationDate>
+	<copyright>GNU/GPLv2</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>support@thekrotek.com</authorEmail>
+	<authorUrl>thekrotek.com</authorUrl>
+	<version>2.3.1</version>
+    <description>
+    <![CDATA[
+		<p>This plugin places Joomla system messages in nice looking modal window. Window design is highly customizable and easy to change.</p>
+		<p>You'll find documentation right on <a href="http://thekrotek.com/joomla-extensions/free-extensions" target="_blank" title="Read documentation">extension's page</a>. Send all your support requests to <a href="mailto:support@thekrotek.com" target="_blank" title="Write us email">support@thekrotek.com</a> or post them on <a href="http://thekrotek.com/forum" target="_blank" title="Visit support forum">support forum</a>.</p>
+	]]>
+	</description>
+	<files>
+		<filename plugin="modalmessages">modalmessages.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB.plg_system_modalmessages.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+	 		<fieldset name="basic">		
+				<field name="dim" type="radio" class="btn-group" default="1" label="PLG_SYSTEM_MODALMESSAGES_DIM" description="PLG_SYSTEM_MODALMESSAGES_DIM_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="close" type="radio" class="btn-group" default="both" label="PLG_SYSTEM_MODALMESSAGES_CLOSE" description="PLG_SYSTEM_MODALMESSAGES_CLOSE_DESC">
+					<option value="button">PLG_SYSTEM_MODALMESSAGES_CLOSE_BUTTON</option>
+					<option value="background">PLG_SYSTEM_MODALMESSAGES_CLOSE_BACKGROUND</option>
+					<option value="both">PLG_SYSTEM_MODALMESSAGES_CLOSE_BOTH</option>
+				</field>
+				<field name="timeout" type="text" default="" label="PLG_SYSTEM_MODALMESSAGES_TIMEOUT" description="PLG_SYSTEM_MODALMESSAGES_TIMEOUT_DESC" />
+				<field name="speed" type="radio" class="btn-group" default="fast" label="PLG_SYSTEM_MODALMESSAGES_SPEED" description="PLG_SYSTEM_MODALMESSAGES_SPEED_DESC">
+					<option value="slow">PLG_SYSTEM_MODALMESSAGES_SPEED_SLOW</option>
+					<option value="fast">PLG_SYSTEM_MODALMESSAGES_SPEED_FAST</option>
+				</field>				
+				<field name="footer" type="text" default="" filter="raw" label="PLG_SYSTEM_MODALMESSAGES_FOOTER" description="PLG_SYSTEM_MODALMESSAGES_FOOTER_DESC" />
+	 		</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="System - Modal Messages"><![CDATA[https://thekrotek.com/index.php?option=com_smartseller&task=updates&type=plugin&folder=system&name=system_modalmessages]]></server>
+	</updateservers>	
+</extension>

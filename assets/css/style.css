@@ -1,0 +1,162 @@
+#modal-messages
+{
+    display: none;
+}
+
+#modal-messages .messages-hide
+{
+    display: none;
+}
+
+#modal-messages #messages-header #messages-close a
+{
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
+#modal-messages
+{
+    position: fixed;
+    text-align: center;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+    margin: 0;
+    left: 0;
+    top: 0;
+    z-index: 100000;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    padding: 3px;
+}
+
+#modal-messages #messages-container
+{
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+#modal-messages #messages-header
+{
+    background-color: #46494f;
+    color: #ffffff;
+    height: 35px;
+    width: 100%;
+    display: block;
+    color: #ffffff;
+    text-align: left;
+    line-height: 35px;
+    font-size: 125%;
+    margin: 0;
+}
+
+#modal-messages.notice #messages-header
+{
+    background-color: #2e7eed;
+}
+
+#modal-messages.warning #messages-header
+{
+    background-color: #d47600;
+}
+
+#modal-messages.error #messages-header
+{
+    background-color: #f22121;
+}
+
+#modal-messages #messages-header #messages-title
+{
+    float: left;
+    margin-left: 6px;
+    font-weight: bold;
+}
+
+#modal-messages #messages-header #messages-close
+{
+    float: right;
+    margin-right: 6px;
+    margin-top: 6px;
+}
+
+#modal-messages #messages-header #messages-close a
+{
+    background:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjM1Q0IyNzM5QjlERDExRTRCRjkxRkVGODY3MkE5MzA4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjM1Q0IyNzNBQjlERDExRTRCRjkxRkVGODY3MkE5MzA4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzVDQjI3MzdCOUREMTFFNEJGOTFGRUY4NjcyQTkzMDgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzVDQjI3MzhCOUREMTFFNEJGOTFGRUY4NjcyQTkzMDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7fD0iiAAAB+klEQVR42qyVO0iCURTHNSzJarCHkOlQBoHR3GLRGDUEtbX0WBvspREVTtGQQ1Bze0QtUbRqNTT0RKMamnqoKQ1BKUZf/xvnwvHj+z4jPPDDe8/9n/Nd7+Ncs6IoJh1zAx8YAG3ATv43cAv2QBQ8akaLxCocYBKklOKWAH6KKchjVs3YCzZBJ/OlwDP4oL4NOIGDaU7BOLjRmnEruGezeQFh0AXKma4CdNNYgunvgEfqpLganDDRGfBpLJMa8dFzFncMqnjiOTYYA84/JJUIbZzFB2ViN0iTMwm8LGgUBDSSBWhM9jvYZr8ClwyWtsbEYyBL/lnmD5IvSxrpX2d5RizYv37axwzYZTvdAKzUXqFfM1imthirZ/odMAxqQZ+Jrc+FavdtYAl80XiekO1F0ki9FVzS+LWJ1lVYVGdzQiy5Qu2QjvZIXpwycZRNxpYF36wv2p9FYn6/EjNYCnEMcxpLkaUxvaW4Eo5t6qTpRknhDPv7eToZAZZc2DTT94AM+bfEUuzT9OvAIPs7oorlqD0PwmAVLJAvRxppQ3QihB2IL7nY4S7FBUnKCyKYKuGV9vNaUQkiJShCEcpVUDZbDMqmheksBmWzWa/Qe8AG6FUV+ifwTv0a0KQq9IdgAjwYPU32fzxN9mJPk95j2g4ayS+eqXixx/RHgAEAZcuffLLrkk4AAAAASUVORK5CYII=') no-repeat 0 0;
+}
+
+#modal-messages #messages-main
+{
+    background-color: #ffffff;
+    height: auto;
+    width: 100%;
+    display: block;
+    color: #4f5054;
+    font-size: 125%;
+    text-align: justify;
+    min-height: 100px;
+}
+
+#modal-messages #messages-main p
+{
+    margin: 0;
+    padding: 15px;
+    text-align: justify;
+    font-size: 85%;
+    line-height: 125%;
+}
+
+#modal-messages #messages-main p
+{
+    display: block;
+    margin-bottom: 10px;
+}
+
+#modal-messages #messages-main p.messages-notice
+{
+    color: #2e7eed;
+}
+
+#modal-messages #messages-main p.messages-warning
+{
+    color: #d47600;
+}
+
+#modal-messages #messages-main p.messages-error
+{
+    color: #f22121;
+}
+
+#modal-messages #messages-footer
+{
+    clear: left;
+    display: block;
+    width: auto;
+    height: 35px;
+    background: #f7f7f7;
+    color: #4f5054;
+    line-height: 35px;
+    padding-right: 15px;
+    font-size: 85%;
+    text-align: right;
+}
+
+#messages-overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+    opacity: 0.6;
+}
+
+.table .inputbox .system-message
+{
+    line-height: 100% ;
+    display: block ;
+    padding-left: 20px ;
+    text-decoration-color: #000000;
+}
